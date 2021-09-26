@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="calc.png">
+    <title>Calculation</title>
+</head>
+<body>
+<script src="./logic.js">
+</script>
+<div style="position: relative; height: 100vh;">
+
+<div id="loading">Завантаження курсу...</div>
+<table>
+    <caption>Розрахунок вартості</caption>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col">USD</th>
+        <th scope="col">EUR</th>
+        <th scope="col">GPB</th>
+        <th scope="col">PLN</th>
+    </tr>
+    <tr>
+        <th scope="row">Курс</th>
+        <td id="usd">0</td>
+        <td id="eur">0</td>
+        <td id="gpb">0</td>
+        <td id="pln">0</td>
+    </tr>
+    <tr>
+        <th scope="row">Ціна</th>
+        <td><input onkeyup="calculatePriceFor('usd', this.value)" type="number" name="usd-price"/></td>
+        <td><input onkeyup="calculatePriceFor('eur', this.value)" type="number" name="eur-price"/></td>
+        <td><input onkeyup="calculatePriceFor('gpb', this.value)" type="number" name="gpb-price"/></td>
+        <td><input onkeyup="calculatePriceFor('pln', this.value)" type="number" name="pln-price"/></td>
+    </tr>
+    <tr>
+        <th scope="row">Вартість</th>
+        <td id="res-usd" class="green">0</td>
+        <td id="res-eur" class="green">0</td>
+        <td id="res-gpb" class="green">0</td>
+        <td id="res-pln" class="green">0</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
